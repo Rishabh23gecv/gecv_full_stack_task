@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Student Information Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            align-items: center;
+       
+        }
+
+        table {
+            width: 80%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover td {
+            background-color: #e1f5fe;
+            cursor: pointer;
+        }
+
+        th[rowspan] {
+            background-color: #007bff;
+        }
+
+        th[colspan] {
+            background-color: #28a745;
+            color: white;
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+  
+    <tr>
+        <th rowspan="2">Name</th>
+        <th rowspan="2">Registration No</th>
+        <th colspan="2">CGPA till Last Semester</th>
+    </tr>
+    <tr>
+        <th>CGPA</th>
+        <th>Semester</th>
+    </tr>
+    <tr>
+        <td>rishabh anand</td>
+        <td>23176527736</td>
+        <td>8.06</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>satyam</td>
+        <td>23456798765</td>
+        <td>7.89</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>rahul raj</td>
+        <td>23145123098</td>
+        <td>7.45</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>sumit kumar</td>
+        <td>23298756787</td>
+        <td>6.9</td>
+        <td>3</td>
+    </tr>
+</table>
+
+</body>
+</html>
