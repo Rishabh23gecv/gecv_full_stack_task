@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>javascript file</title>
+</head>
+<body>
+<h1 id="changecontent">This is html content.</h1>
+
+<div id="newdiv" style="background-color:pink;height:200px"
+    onmouseover="changeIn(this);" onmouseout="changeOut();">
+	
+</div>
+
+<form>
+<input type="text" placeholder="username" id="usr-nm"
+onchange="getFormdata();"><br>
+<span id="username-warn"></span><br><br><br>
+<input type="text" placeholder="password" id="pwd">
+<input type="submit" value="submit"onsubmit="checkrequired();">
+</form>
+<script>
+function changeIn(){
+  document.getElementById("newdiv").style.backgroundColor="blue";
+  }
+function changeOut(){
+  document.getElementById("newdiv").style.backgroundColor="brown";
+}
+
+function getFormData(){
+var val=document.getElementById("usr-nm").value;
+if(val.length<8){
+let msg="NO  lower case present."
+document.getElementById('username-warn').innerHTML=msg;
+}
+else{
+let msg="Thanks for your input.usernameis of 8 character."
+ document.getElementById('username-warn').innerHTML=msg;
+}
+}
+ 
+var pwd=document.getElementById("pwd").value;
+let pwdmsg="";
+if(pwd.length<8){
+pwdMsg="password must be at least8 characters.";
+isValid=false;
+}elseif(!/[A-Z]/.test(pwd)){
+pwdMsg="password must contain an upper case letter.";
+isValid=false;
+} else if(!/[a-z]/)){
+pwdmsg="password must contain a lowercase letter.";
+isValid=false;
+} else if (!/[0-9]/.test(pwd)){
+pwdMsg=password must contain a digit.";
+is valid=false;
+}else if {
+pwdMsg="";
+}
+document.getElementById('password-warn').inner.HTML=pwdMsg;
+
+  return is valid;
+  }
+
+</script>
+</body>
+</html> 
+	
