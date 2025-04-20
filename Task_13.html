@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>JavaScript Task</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f5;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #34495e;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-top: 30px;
+    }
+    pre {
+      background-color: #e6f2ff;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      border-left: 4px solid #2980b9;
+    }
+    hr {
+      margin: 25px 0;
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <h2>1. Name and Address</h2>
+  <pre id="output1"></pre>
+  <hr>
+
+  <h2>2. Check Value and Data-Type</h2>
+  <pre id="output2"></pre>
+  <hr>
+
+  <h2>3. Add Two Strings and Convert to Uppercase</h2>
+  <pre id="output3"></pre>
+  <hr>
+
+  <h2>4. Length of String in Bytes</h2>
+  <pre id="output4"></pre>
+  <hr>
+
+  <h2>5. Round a Number</h2>
+  <pre id="output5"></pre>
+
+  <script>
+    // 1. Display my name and address
+    let fullName = "Aman Kumar";
+    let homeAddress = "Flat No. 10B, Rainbow Apartments, Lucknow";
+    document.getElementById("output1").textContent =
+      `Name: ${fullName}\nAddress: ${homeAddress}`;
+
+    // 2. Check if value and data type of two variables are the same
+    let firstValue = 100;
+    let secondValue = "100";
+    let sameCheck = (firstValue === secondValue) ?
+        "✅ Same Value and Type" :
+        "❌ Either Value or Type is Different";
+    document.getElementById("output2").textContent =
+      `First: ${firstValue} (${typeof firstValue})\n` +
+      `Second: ${secondValue} (${typeof secondValue})\n` +
+      `Result: ${sameCheck}`;
+
+    // 3. Add two strings and convert to uppercase
+    let greeting = "good";
+    let timeOfDay = "morning";
+    let combinedText = (greeting + timeOfDay).toUpperCase();
+    document.getElementById("output3").textContent =
+      `Combined Text: ${combinedText}`;
+
+    // 4. Calculate the length of string in bytes
+    let myString = "Hello World 🌍";
+    let byteSize = new TextEncoder().encode(myString).length;
+    document.getElementById("output4").textContent =
+      `String: "${myString}"\nLength in Bytes: ${byteSize}`;
+
+    // 5. Round a number to a given number of digits
+    function roundNumber(num, decimalPlaces) {
+      return Number(num.toFixed(decimalPlaces));
+    }
+    let rawNumber = 7.987654;
+    let digitsToRound = 2;
+    let finalRounded = roundNumber(rawNumber, digitsToRound);
+    document.getElementById("output5").textContent =
+      `Original Number: ${rawNumber}\nRounded (${digitsToRound} digits): ${finalRounded}`;
+  </script>
+
+</body>
+</html>

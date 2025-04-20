@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Array Programs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+      color: #333;
+    }
+    p {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="sortOutput"></p>
+  <p id="concatOutput"></p>
+  <p id="removeOutput"></p>
+
+  <script>
+    // 1. Sort an array
+    function sortArray() {
+      let arr = [5, 2, 9, 1, 7];
+      arr.sort((a, b) => a - b);
+      document.getElementById("sortOutput").innerHTML = "Sorted Array: " + arr.join(", ");
+    }
+
+    // 2. Concatenate two arrays
+    function concatenateArrays() {
+      let arr1 = ["a", "b", "c"];
+      let arr2 = ["x", "y", "z"];
+      let result = arr1.concat(arr2);
+      document.getElementById("concatOutput").innerHTML = "Concatenated Array: " + result.join(", ");
+    }
+
+    // 3. Remove first element from an array
+    function removeFirstElement() {
+      let arr = [10, 20, 30, 40];
+      arr.shift();
+      document.getElementById("removeOutput").innerHTML = "Array after removing first element: " + arr.join(", ");
+    }
+
+    // Call all functions
+    sortArray();
+    concatenateArrays();
+    removeFirstElement();
+  </script>
+
+</body>
+</html>
