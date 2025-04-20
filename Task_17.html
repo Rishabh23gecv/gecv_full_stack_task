@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Exception Handling Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    h2 {
+      color: #333;
+    }
+    pre {
+      background-color: #fff;
+      border-left: 5px solid #4CAF50;
+      padding: 10px;
+      margin-bottom: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. Handle Exception: Undeclared Variable</h2>
+  <pre id="output1"></pre>
+  <script>
+    try {
+      console.log(nonDeclaredVar);
+    } catch (error) {
+      document.getElementById("output1").textContent = "Error: " + error.message;
+    }
+  </script>
+
+  <h2>2. Throw Divide by Zero Error</h2>
+  <pre id="output2"></pre>
+  <script>
+    function divide(a, b) {
+      if (b === 0) {
+        throw new Error("zero se divide nhi hota hai
+		");
+      }
+      return a / b;
+    }
+
+    try {
+      let result = divide(10, 0);
+      document.getElementById("output2").textContent = "Result: " + result;
+    } catch (error) {
+      document.getElementById("output2").textContent = "Error: " + error.message;
+    }
+  </script>
+
+  <h2>3. Throw Out of Bound Error</h2>
+  <pre id="output3"></pre>
+  <script>
+    function accessArrayElement(arr, index) {
+      if (index >= arr.length || index < 0) {
+        throw new Error("Out of Bound Error");
+      }
+      return arr[index];
+    }
+
+    try {
+      let myArray = [1, 2, 3];
+      let element = accessArrayElement(myArray, 5);
+      document.getElementById("output3").textContent = "Element: " + element;
+    } catch (error) {
+      document.getElementById("output3").textContent = "Error: " + error.message;
+    }
+  </script>
+
+  <h2>4. Exception Handling with Finally</h2>
+  <pre id="output4"></pre>
+  <script>
+    try {
+      let x = 5;
+      let y = 0;
+      if (y === 0) {
+        throw new Error("Cannot divide by zero");
+      }
+      let z = x / y;
+      document.getElementById("output4").textContent = "Result: " + z;
+    } catch (error) {
+      document.getElementById("output4").textContent = "Caught Error: " + error.message;
+    } finally {
+      document.getElementById("output4").textContent += "\nFinally block executed.";
+    }
+  </script>
+
+</body>
+</html>

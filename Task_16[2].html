@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple JavaScript Tasks</title>
+</head>
+<body>
+
+  <h2>1. Basic Information Form</h2>
+  <form id="infoForm">
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="email" id="email"><br><br>
+    Age: <input type="number" id="age"><br><br>
+    <button type="button" onclick="displayInfo()">Submit</button>
+  </form>
+  <p id="output"></p>
+
+  <hr>
+
+  <h2>2. Change Image on Button Click</h2>
+  <img id="image" src="https://via.placeholder.com/150/AAAAAA/000000?text=Old+Image" alt="Sample Image"><br><br>
+  <button onclick="changeImage()">Change Image</button>
+
+  <hr>
+
+  <h2>3. Increase / Decrease Font Size</h2>
+  <p id="text">This is a sample text.</p>
+  <button onclick="increaseFont()">Increase Font</button>
+  <button onclick="decreaseFont()">Decrease Font</button>
+
+  <hr>
+
+  <h2>4. Show Current Date & Time</h2>
+  <p id="datetime"></p>
+
+  <script>
+    // Task 1: Display Form Info using innerHTML
+    function displayInfo() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const age = document.getElementById("age").value;
+
+      const output = "Name: " + name + "<br>" + "Email: " + email + "<br>" + "Age: " + age;
+      document.getElementById("output").innerHTML = output;
+    }
+
+    // Task 2: Change Image
+    function changeImage() {
+      document.getElementById("image").src = "https://via.placeholder.com/150/FF0000/FFFFFF?text=New+Image";
+    }
+
+    // Task 3: Increase/Decrease Font Size
+    let fontSize = 16;
+
+    function increaseFont() {
+      fontSize += 2;
+      document.getElementById("text").style.fontSize = fontSize + "px";
+    }
+
+    function decreaseFont() {
+      fontSize -= 2;
+      document.getElementById("text").style.fontSize = fontSize + "px";
+    }
+
+    // Task 4: Show Date & Time
+    function showDateTime() {
+      const now = new Date();
+      document.getElementById("datetime").innerHTML = now.toString();
+    }
+
+    showDateTime(); // Load once
+    setInterval(showDateTime, 1000); // Update every second
+  </script>
+
+</body>
+</html>

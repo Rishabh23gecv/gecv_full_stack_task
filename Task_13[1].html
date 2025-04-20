@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>JS Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    h3 {
+      color: #444;
+      
+    }
+    pre {
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <h3>1. <pre id="output1"></pre></h3>
+  <h3>2. <pre id="output2"></pre></h3>
+  <h3>3. <pre id="output3"></pre></h3>
+  <h3>4. <pre id="output4"></pre></h3>
+  <h3>5. <pre id="output5"></pre></h3>
+
+  <script>
+    // Task 1: Print name and address
+    let myName = "rishabh anand";
+    let myAddress = "madhepura .Bihar 852131";
+    document.getElementById("output1").innerHTML = "Name: " + myName + "\nAddress: " + myAddress;
+
+    // Task 2: Check if value and datatype are same
+    let a = 10;
+    let b = "10";
+    let isSame = (a === b);
+    document.getElementById("output2").innerHTML = "a and b are exactly same? " + isSame;
+
+    // Task 3: Add two strings and return in capital
+    let str1 = "hello ";
+    let str2 = "world";
+    let combined = (str1 + str2).toUpperCase();
+    document.getElementById("output3").innerHTML = "Combined: " + combined;
+
+    // Task 4: Convert string length in bytes
+    let sampleText = "Hello!";
+    let byteLength = new TextEncoder().encode(sampleText).length;
+    document.getElementById("output4").innerHTML = "Byte length of '" + sampleText + "' is " + byteLength;
+
+    // Task 5: Round number to specific digits
+    let number = 3.141592;
+    let digits = 3;
+    let rounded = number.toFixed(digits);
+    document.getElementById("output5").innerHTML = "Rounded value: " + rounded;
+  </script>
+
+</body>
+</html>
