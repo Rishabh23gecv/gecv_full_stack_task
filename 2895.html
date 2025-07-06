@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>College Club Portal</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+    }
+
+    form input, form select, form button {
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to College Club</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="members.php">Members</a>
+      <a href="#register">Register</a>
+    </nav>
+  </header>
+
+  
+    <section id="intro">
+      <h2>About the Club</h2>
+      <p>This is a platform for students to connect and collaborate through our college club.</p>
+    </section>
+
+    <section id="register">
+      <h2>Register New Member</h2>
+      <form action="register.php" method="POST" onsubmit="return validateForm();">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+
+        <select name="branch" required>
+          <option value="">Select Branch</option>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="ME">ME</option>
+          <option value="CE">CE</option>
+        </select>
+
+        <select name="year" required>
+          <option value="">Select Year</option>
+          <option value="1st">1st Year</option>
+          <option value="2nd">2nd Year</option>
+          <option value="3rd">3rd Year</option>
+          <option value="4th">4th Year</option>
+        </select>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 College Club</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      const email = document.querySelector('input[name="email"]').value;
+      if (!email.includes("@")) {
+        alert("Please enter a valid email.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
