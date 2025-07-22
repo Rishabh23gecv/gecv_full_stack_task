@@ -1,54 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JavaScript Array Programs</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      padding: 20px;
-      color: #333;
-    }
-    p {
-      margin-bottom: 15px;
-      font-size: 18px;
-    }
-  </style>
+    <title>JavaScript Array Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            margin: 0;
+            padding: 30px;
+        }
+
+        .task {
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        p {
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+    </style>
 </head>
 <body>
 
-  <p id="sortOutput"></p>
-  <p id="concatOutput"></p>
-  <p id="removeOutput"></p>
+<div class="task">
+    <div class="title">1. Sort a JavaScript Array</div>
+    <button onclick="sortArray()">Sort Array</button>
+    <p id="sortResult"></p>
+</div>
 
-  <script>
-    // 1. Sort an array
+<div class="task">
+    <div class="title">2. Concatenate Two Arrays</div>
+    <button onclick="concatArrays()">Concatenate Arrays</button>
+    <p id="concatResult"></p>
+</div>
+
+<div class="task">
+    <div class="title">3. Remove First Element from Array</div>
+    <button onclick="removeFirstElement()">Remove First Element</button>
+    <p id="removeResult"></p>
+</div>
+
+<script>
+    // Task 1: Sort a JavaScript Array
     function sortArray() {
-      let arr = [5, 2, 9, 1, 7];
-      arr.sort((a, b) => a - b);
-      document.getElementById("sortOutput").innerHTML = "Sorted Array: " + arr.join(", ");
+        let arr = [34, 12, 5, 90, 23];
+        arr.sort(function(a, b) {
+            return a - b;
+        });
+        document.getElementById("sortResult").innerHTML = "Sorted Array: " + arr.join(", ");
     }
 
-    // 2. Concatenate two arrays
-    function concatenateArrays() {
-      let arr1 = ["a", "b", "c"];
-      let arr2 = ["x", "y", "z"];
-      let result = arr1.concat(arr2);
-      document.getElementById("concatOutput").innerHTML = "Concatenated Array: " + result.join(", ");
+    // Task 2: Concatenate Two Arrays
+    function concatArrays() {
+        let array1 = ["Apple", "Banana"];
+        let array2 = ["Mango", "Orange"];
+        let combined = array1.concat(array2);
+        document.getElementById("concatResult").innerHTML = "Concatenated Array: " + combined.join(", ");
     }
 
-    // 3. Remove first element from an array
+    // Task 3: Remove First Element from JavaScript Array
     function removeFirstElement() {
-      let arr = [10, 20, 30, 40];
-      arr.shift();
-      document.getElementById("removeOutput").innerHTML = "Array after removing first element: " + arr.join(", ");
+        let fruits = ["Apple", "Banana", "Mango"];
+        let removed = fruits.shift();
+        document.getElementById("removeResult").innerHTML =
+            "After Removing First Element: " + fruits.join(", ") +
+            "<br>Removed Element: " + removed;
     }
-
-    // Call all functions
-    sortArray();
-    concatenateArrays();
-    removeFirstElement();
-  </script>
+</script>
 
 </body>
 </html>
