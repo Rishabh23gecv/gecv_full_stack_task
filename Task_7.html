@@ -1,44 +1,178 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>my resume</title>
-<style>
-body{background-color:pink;}
-img{border=10px double black;
-    border-radius:50%}
-ul{font-family:sans-serif;
-    color:blue;
-     list-style-type:square;}	
-  
-	
-</style>
+  <title>My Resume - Rishabh Anand</title>
+  <style>
+    body {
+      background-color: #e6f2ff; /* soothing blue */
+      
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    nav {
+      background-color: #003366;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #3399ff;
+    }
+
+    .center {
+      text-align: center;
+      padding: 20px;
+    }
+
+    img {
+      border: 5px double black;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
+
+    h1, h2, h3, h4 {
+      color: #004080;
+      margin-left: 20px;
+    }
+
+    p, ul {
+      margin-left: 40px;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      margin: 20px auto;
+      background-color: #ffffff;
+    }
+
+    table, th, td {
+      border: 2px solid #999;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .contact-links {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    a.download-btn {
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    a.download-btn:hover {
+      background-color: #0059b3;
+    }
+  </style>
 </head>
 <body>
 
-<center><h1>RISHABH ANAND</h1></center>
-<center><img src="images/rishav12.jpg" width="200" height="200" style="border-radius:circle solid black"></center>
-<h1 style="color:orange;">about me</h1>
-<p>I am currently pursuing my B.Tech.degree at Government Engineering College,Vaishali in Computer Science domain.I am actively learing FULL STACK WEB DEVELOPMENT from LYSS TECHNOLOGY</p>
- <h2 style="color:orange;">Education</h2>
- <ul class:"l1">
- <li>I completed my Matriculate from Adwaita Mission High School</li>
- <li>and Intermediate from Shanti Mission Academy</li>
- </ul>
- <h3 style="color:orange"> skills</h3>
- <ul class:"l2">
- <li>Programming:C,OOPS</li>
- <li>Web Development:HTML,CSS</li>
- <li>Problem solving skills</li>
- </ul>
- <h4 style="color:orange;">hobbies</h4>
- <ul class:"l3">
- <li>football</li>
- <li>volleyball</li>
- <li>watching movies</li>
- </ul>
- <a href="mailto:anandrishabh292gmail.com">email</a>
- <a href="tel:+918797520822">contact</a>
+  <!-- Navbar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <!-- Header Section -->
+  <div class="center" id="home">
+    <h1>RISHABH ANAND</h1>
+    <img src="images/rishav12.jpg" alt="Rishabh Anand">
+  </div>
+
+  <!-- About -->
+  <h2>About Me</h2>
+  <p>I am currently pursuing my B.Tech degree in Computer Science at Government Engineering College, Vaishali.
+     I'm actively learning Full Stack Web Development from LYSS TECHNOLOGY to strengthen my practical skills.</p>
+
+  <!-- Education -->
+  <h2 id="education">Education</h2>
+  <table>
+    <tr>
+      <th>Qualification</th>
+      <th>Institution</th>
+      <th>Year</th>
+    </tr>
+    <tr>
+      <td>Matriculation</td>
+      <td>Adwaita Mission High School</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <td>Intermediate</td>
+      <td>Shanti Mission Academy</td>
+      <td>2022</td>
+    </tr>
+    <tr>
+      <td>B.Tech (CSE)</td>
+      <td>GEC Vaishali</td>
+      <td>2023–2027</td>
+    </tr>
+  </table>
+
+  <!-- Skills -->
+  <h3 id="skills">Skills</h3>
+  <ul>
+    <li><strong>Programming Languages:</strong> C, OOPS</li>
+    <li><strong>Web Technologies:</strong> HTML, CSS</li>
+    <li><strong>Others:</strong> Problem Solving, Debugging</li>
+  </ul>
+
+  <!-- Strengths -->
+  <h3>Strengths</h3>
+  <ul>
+    <li>Quick Learner</li>
+    <li>Team Player</li>
+    <li>Positive Attitude</li>
+    <li>Good Communication Skills</li>
+  </ul>
+
+  <!-- Projects -->
+  <h3>Projects</h3>
+  <ul>
+    <li><strong>Student Management System</strong>: A web app for attendance and marks tracking using PHP & MySQL</li>
+    <li><strong>Portfolio Website</strong>: Personal site using HTML, CSS, and simple JS</li>
+    <li><strong>Basic Calculator</strong>: JavaScript project for simple arithmetic operations</li>
+  </ul>
+
+  <!-- Hobbies -->
+  <h4>Hobbies</h4>
+  <ul>
+    <li>Playing Football</li>
+    <li>Playing Volleyball</li>
+    <li>Watching Movies</li>
+    <li>Exploring New Technologies</li>
+  </ul>
+
+  <!-- Contact & Resume Download -->
+  <div class="contact-links" id="contact">
+    <a href="mailto:anandrishabh292@gmail.com">📧 Email</a>
+    <a href="tel:+918797520822">📞 Contact</a><br><br>
+    <a href="resume.pdf" download class="download-btn">⬇ Download Resume (PDF)</a>
+  </div>
 
 </body>
 </html>
